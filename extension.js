@@ -89,7 +89,8 @@ function enable() {
      */
     WorkspacesView.WorkspacesView.prototype._onAnyKeyPress = function(actor, event) {
         let key = event.get_key_symbol();
-        let state = Shell.get_event_state(event);
+        let state = event.get_state(event);
+
         if (key == Clutter.Up || key == Clutter.Down || key == Clutter.Left || key == Clutter.Right) {
             return this._arrowKeyPressed(key);
         } else {
