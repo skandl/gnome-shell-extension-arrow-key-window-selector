@@ -266,7 +266,7 @@ function enable() {
     WorkspacesView.WorkspacesView.prototype._initSelection = function(windowOverlays) {
         this._anyButtonPressEventId = global.stage.connect('button-press-event', Lang.bind(this, this._endSelectionForListener));
         this._anyMotionEventId = global.stage.connect('motion-event', Lang.bind(this, this._endSelectionForListener));
-        this._lightbox = new Lightbox.Lightbox(Main.uiGroup, {fadeTime: 0.1});
+        this._lightbox = new Lightbox.Lightbox(Main.uiGroup, {});
         this._lightbox.show();
         let focus = global.screen.get_display().focus_window;
         for (i in windowOverlays) {
